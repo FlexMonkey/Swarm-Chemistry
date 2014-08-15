@@ -1,0 +1,420 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E4E8216199E3B1A00F6C782 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E8215199E3B1A00F6C782 /* AppDelegate.swift */; };
+		3E4E8218199E3B1A00F6C782 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E8217199E3B1A00F6C782 /* GameScene.sks */; };
+		3E4E821A199E3B1A00F6C782 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E8219199E3B1A00F6C782 /* GameScene.swift */; };
+		3E4E821C199E3B1A00F6C782 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E821B199E3B1A00F6C782 /* GameViewController.swift */; };
+		3E4E821F199E3B1A00F6C782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E821D199E3B1A00F6C782 /* Main.storyboard */; };
+		3E4E8221199E3B1A00F6C782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E4E8220199E3B1A00F6C782 /* Images.xcassets */; };
+		3E4E822D199E3B1A00F6C782 /* SwarmChemistryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E822C199E3B1A00F6C782 /* SwarmChemistryTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E4E8227199E3B1A00F6C782 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E4E8208199E3B1900F6C782 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3E4E820F199E3B1900F6C782;
+			remoteInfo = SwarmChemistry;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3E4E8210199E3B1A00F6C782 /* SwarmChemistry.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwarmChemistry.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E8214199E3B1A00F6C782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4E8215199E3B1A00F6C782 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3E4E8217199E3B1A00F6C782 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
+		3E4E8219199E3B1A00F6C782 /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
+		3E4E821B199E3B1A00F6C782 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		3E4E821E199E3B1A00F6C782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3E4E8220199E3B1A00F6C782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3E4E8226199E3B1A00F6C782 /* SwarmChemistryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwarmChemistryTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E4E822B199E3B1A00F6C782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3E4E822C199E3B1A00F6C782 /* SwarmChemistryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwarmChemistryTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E4E820D199E3B1900F6C782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4E8223199E3B1A00F6C782 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E4E8207199E3B1900F6C782 = {
+			isa = PBXGroup;
+			children = (
+				3E4E8212199E3B1A00F6C782 /* SwarmChemistry */,
+				3E4E8229199E3B1A00F6C782 /* SwarmChemistryTests */,
+				3E4E8211199E3B1A00F6C782 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3E4E8211199E3B1A00F6C782 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E8210199E3B1A00F6C782 /* SwarmChemistry.app */,
+				3E4E8226199E3B1A00F6C782 /* SwarmChemistryTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E4E8212199E3B1A00F6C782 /* SwarmChemistry */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E8215199E3B1A00F6C782 /* AppDelegate.swift */,
+				3E4E8217199E3B1A00F6C782 /* GameScene.sks */,
+				3E4E8219199E3B1A00F6C782 /* GameScene.swift */,
+				3E4E821B199E3B1A00F6C782 /* GameViewController.swift */,
+				3E4E821D199E3B1A00F6C782 /* Main.storyboard */,
+				3E4E8220199E3B1A00F6C782 /* Images.xcassets */,
+				3E4E8213199E3B1A00F6C782 /* Supporting Files */,
+			);
+			path = SwarmChemistry;
+			sourceTree = "<group>";
+		};
+		3E4E8213199E3B1A00F6C782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E8214199E3B1A00F6C782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		3E4E8229199E3B1A00F6C782 /* SwarmChemistryTests */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E822C199E3B1A00F6C782 /* SwarmChemistryTests.swift */,
+				3E4E822A199E3B1A00F6C782 /* Supporting Files */,
+			);
+			path = SwarmChemistryTests;
+			sourceTree = "<group>";
+		};
+		3E4E822A199E3B1A00F6C782 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E822B199E3B1A00F6C782 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E4E820F199E3B1900F6C782 /* SwarmChemistry */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E4E8230199E3B1A00F6C782 /* Build configuration list for PBXNativeTarget "SwarmChemistry" */;
+			buildPhases = (
+				3E4E820C199E3B1900F6C782 /* Sources */,
+				3E4E820D199E3B1900F6C782 /* Frameworks */,
+				3E4E820E199E3B1900F6C782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwarmChemistry;
+			productName = SwarmChemistry;
+			productReference = 3E4E8210199E3B1A00F6C782 /* SwarmChemistry.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3E4E8225199E3B1A00F6C782 /* SwarmChemistryTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E4E8233199E3B1A00F6C782 /* Build configuration list for PBXNativeTarget "SwarmChemistryTests" */;
+			buildPhases = (
+				3E4E8222199E3B1A00F6C782 /* Sources */,
+				3E4E8223199E3B1A00F6C782 /* Frameworks */,
+				3E4E8224199E3B1A00F6C782 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3E4E8228199E3B1A00F6C782 /* PBXTargetDependency */,
+			);
+			name = SwarmChemistryTests;
+			productName = SwarmChemistryTests;
+			productReference = 3E4E8226199E3B1A00F6C782 /* SwarmChemistryTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E4E8208199E3B1900F6C782 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Simon Gladman";
+				TargetAttributes = {
+					3E4E820F199E3B1900F6C782 = {
+						CreatedOnToolsVersion = 6.0;
+					};
+					3E4E8225199E3B1A00F6C782 = {
+						CreatedOnToolsVersion = 6.0;
+						TestTargetID = 3E4E820F199E3B1900F6C782;
+					};
+				};
+			};
+			buildConfigurationList = 3E4E820B199E3B1900F6C782 /* Build configuration list for PBXProject "SwarmChemistry" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3E4E8207199E3B1900F6C782;
+			productRefGroup = 3E4E8211199E3B1A00F6C782 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E4E820F199E3B1900F6C782 /* SwarmChemistry */,
+				3E4E8225199E3B1A00F6C782 /* SwarmChemistryTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3E4E820E199E3B1900F6C782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4E8221199E3B1A00F6C782 /* Images.xcassets in Resources */,
+				3E4E8218199E3B1A00F6C782 /* GameScene.sks in Resources */,
+				3E4E821F199E3B1A00F6C782 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4E8224199E3B1A00F6C782 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E4E820C199E3B1900F6C782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4E821A199E3B1A00F6C782 /* GameScene.swift in Sources */,
+				3E4E821C199E3B1A00F6C782 /* GameViewController.swift in Sources */,
+				3E4E8216199E3B1A00F6C782 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3E4E8222199E3B1A00F6C782 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4E822D199E3B1A00F6C782 /* SwarmChemistryTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3E4E8228199E3B1A00F6C782 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3E4E820F199E3B1900F6C782 /* SwarmChemistry */;
+			targetProxy = 3E4E8227199E3B1A00F6C782 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3E4E821D199E3B1A00F6C782 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3E4E821E199E3B1A00F6C782 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3E4E822E199E3B1A00F6C782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 2;
+			};
+			name = Debug;
+		};
+		3E4E822F199E3B1A00F6C782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = 2;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E4E8231199E3B1A00F6C782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SwarmChemistry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		3E4E8232199E3B1A00F6C782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				INFOPLIST_FILE = SwarmChemistry/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		3E4E8234199E3B1A00F6C782 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwarmChemistryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwarmChemistry.app/SwarmChemistry";
+			};
+			name = Debug;
+		};
+		3E4E8235199E3B1A00F6C782 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SwarmChemistryTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SwarmChemistry.app/SwarmChemistry";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E4E820B199E3B1900F6C782 /* Build configuration list for PBXProject "SwarmChemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4E822E199E3B1A00F6C782 /* Debug */,
+				3E4E822F199E3B1A00F6C782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E4E8230199E3B1A00F6C782 /* Build configuration list for PBXNativeTarget "SwarmChemistry" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4E8231199E3B1A00F6C782 /* Debug */,
+				3E4E8232199E3B1A00F6C782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		3E4E8233199E3B1A00F6C782 /* Build configuration list for PBXNativeTarget "SwarmChemistryTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E4E8234199E3B1A00F6C782 /* Debug */,
+				3E4E8235199E3B1A00F6C782 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E4E8208199E3B1900F6C782 /* Project object */;
+}
