@@ -1,25 +1,143 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6162" systemVersion="14A238h" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6160"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Game View Controller-->
         <scene sceneID="tXr-a1-R10">
             <objects>
-                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BV1-FR-VrT" customClass="GameViewController" customModule="SwarmChemistry" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="maK-i9-Uhn"/>
                         <viewControllerLayoutGuide type="bottom" id="khH-OB-KpY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3se-qz-xqx" customClass="SKView">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="jrg-3V-kYe">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Cohesion"/>
+                                    <segment title="Alignment"/>
+                                    <segment title="Seperation"/>
+                                    <segment title="Steering"/>
+                                    <segment title="Pace Keeping"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="16" y="519" width="768" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aoe-re-0CW">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Genome One"/>
+                                    <segment title="Genome Two"/>
+                                    <segment title="Genome Three"/>
+                                    <segment title="Genome Four"/>
+                                </segments>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="16" y="483" width="768" height="29"/>
+                                </variation>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cvq-88-KUI">
+                                <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="14" y="562" width="772" height="31"/>
+                                </variation>
+                            </slider>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MWp-Mk-2xj">
+                                <rect key="frame" x="-61" y="-14" width="123" height="29"/>
+                                <segments>
+                                    <segment title="Single Thread"/>
+                                    <segment title="Two Threads"/>
+                                    <segment title="Four Threads"/>
+                                    <segment title="Eight Threads"/>
+                                    <segment title="Sixteen Threads"/>
+                                    <segment title="Thirty Two Threads"/>
+                                </segments>
+                                <variation key="widthClass=regular" misplaced="YES">
+                                    <rect key="frame" x="8" y="20" width="776" height="29"/>
+                                </variation>
+                                <connections>
+                                    <action selector="threadButtonBarChangeHandler:" destination="BV1-FR-VrT" eventType="valueChanged" id="Cth-mc-cVZ"/>
+                                </connections>
+                            </segmentedControl>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Aoe-re-0CW" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="8" id="2ZO-sN-NFd"/>
+                            <constraint firstItem="MWp-Mk-2xj" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" constant="8" id="7HB-rC-fJb"/>
+                            <constraint firstItem="jrg-3V-kYe" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" constant="8" id="M0t-52-zr8"/>
+                            <constraint firstItem="cvq-88-KUI" firstAttribute="top" secondItem="jrg-3V-kYe" secondAttribute="bottom" constant="15" id="Psi-Kj-Oji"/>
+                            <constraint firstItem="MWp-Mk-2xj" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" constant="8" id="V3D-nG-2hc"/>
+                            <constraint firstItem="jrg-3V-kYe" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="W6v-rd-j5s"/>
+                            <constraint firstItem="Aoe-re-0CW" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="We1-vd-DeX"/>
+                            <constraint firstItem="Aoe-re-0CW" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" constant="8" id="Wri-f0-akm"/>
+                            <constraint firstItem="jrg-3V-kYe" firstAttribute="top" secondItem="Aoe-re-0CW" secondAttribute="bottom" constant="8" id="fiy-cV-Pdp"/>
+                            <constraint firstItem="cvq-88-KUI" firstAttribute="leading" secondItem="3se-qz-xqx" secondAttribute="leadingMargin" id="h1P-RB-X82"/>
+                            <constraint firstItem="MWp-Mk-2xj" firstAttribute="top" secondItem="maK-i9-Uhn" secondAttribute="bottom" constant="8" id="hp7-27-43i"/>
+                            <constraint firstItem="cvq-88-KUI" firstAttribute="trailing" secondItem="3se-qz-xqx" secondAttribute="trailingMargin" constant="8" id="no0-h4-zfj"/>
+                            <constraint firstItem="khH-OB-KpY" firstAttribute="top" secondItem="cvq-88-KUI" secondAttribute="bottom" constant="8" id="tt2-wz-tnl"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="jrg-3V-kYe"/>
+                                <exclude reference="Aoe-re-0CW"/>
+                                <exclude reference="cvq-88-KUI"/>
+                                <exclude reference="MWp-Mk-2xj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <exclude reference="7HB-rC-fJb"/>
+                                <exclude reference="V3D-nG-2hc"/>
+                                <exclude reference="hp7-27-43i"/>
+                                <exclude reference="2ZO-sN-NFd"/>
+                                <exclude reference="We1-vd-DeX"/>
+                                <exclude reference="Wri-f0-akm"/>
+                                <exclude reference="M0t-52-zr8"/>
+                                <exclude reference="W6v-rd-j5s"/>
+                                <exclude reference="fiy-cV-Pdp"/>
+                                <exclude reference="Psi-Kj-Oji"/>
+                                <exclude reference="h1P-RB-X82"/>
+                                <exclude reference="no0-h4-zfj"/>
+                                <exclude reference="tt2-wz-tnl"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=regular">
+                            <mask key="subviews">
+                                <include reference="jrg-3V-kYe"/>
+                                <include reference="Aoe-re-0CW"/>
+                                <include reference="cvq-88-KUI"/>
+                                <include reference="MWp-Mk-2xj"/>
+                            </mask>
+                            <mask key="constraints">
+                                <include reference="7HB-rC-fJb"/>
+                                <include reference="V3D-nG-2hc"/>
+                                <include reference="hp7-27-43i"/>
+                                <include reference="2ZO-sN-NFd"/>
+                                <include reference="We1-vd-DeX"/>
+                                <include reference="Wri-f0-akm"/>
+                                <include reference="M0t-52-zr8"/>
+                                <include reference="W6v-rd-j5s"/>
+                                <include reference="fiy-cV-Pdp"/>
+                                <include reference="Psi-Kj-Oji"/>
+                                <include reference="h1P-RB-X82"/>
+                                <include reference="no0-h4-zfj"/>
+                                <include reference="tt2-wz-tnl"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="threadButtonBar" destination="MWp-Mk-2xj" id="F3J-jh-3wQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="138.75" y="136"/>
         </scene>
     </scenes>
 </document>

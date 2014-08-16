@@ -11,22 +11,33 @@ import SpriteKit
 
 public class SwarmChemistryOperation : NSOperation
 {
-    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 1000);
+    let swarmMemberArray : NSMutableArray;
+    let startIndex : Int;
+    let sampleSize : Int;
     
-    init(swarmMemberArray : NSMutableArray)
+    init(swarmMemberArray : NSMutableArray, startIndex : Int, sampleSize : Int)
     {
-        super.init();
-        
         self.swarmMemberArray = swarmMemberArray;
+        self.startIndex = startIndex;
+        self.sampleSize = sampleSize;
+        
+        super.init();
     }
     
     override public func main() -> ()
     {
-        for i in 0..<1000
+        let n = startIndex + sampleSize;
+        
+        for var i : Int = startIndex; i < n; i++
         {
-            let foo : SwarmMember = swarmMemberArray[i] as SwarmMember;
+            let swarmMember : SwarmMember = swarmMemberArray[i] as SwarmMember;
             
-            foo.position.x = CGFloat(foo.position.x) + CGFloat(1);
+            swarmMember.position.x = CGFloat(swarmMember.position.x) + CGFloat(1);
+            
+            if swarmMember.position.x > 1024
+            {
+                swarmMember.position.x = 1; 
+            }
         }
     }
 }

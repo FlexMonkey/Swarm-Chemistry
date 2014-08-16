@@ -10,15 +10,20 @@ import SpriteKit
 
 class GameScene: SKScene
 {
-    var swarmChemistryOperation : SwarmChemistryOperation?;
+    var swarmChemistryOperations : Array<SwarmChemistryOperation>?;
+    var swarmChemistryOperationCount = 1;
     
-    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 1000);
-    let swarmMemberRange : Range<Int> = 0..<1000;
+    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 4096);
+    let swarmMemberRange : Range<Int> = 0..<4096;
     
     let queue = NSOperationQueue();
     
+    var startTime : CFAbsoluteTime?;
+    
     override func didMoveToView(view: SKView)
     {
+        backgroundColor = UIColor.blackColor();
+        
         for i in swarmMemberRange
         {
             let swarmMember : SwarmMember = SwarmMember(color: UIColor.redColor(), size: CGSize(width: 2, height: 2));
@@ -30,25 +35,46 @@ class GameScene: SKScene
             addChild(swarmMember);
         }
         
-        swarmChemistryOperation = SwarmChemistryOperation(swarmMemberArray: swarmMemberArray);
-        swarmChemistryOperation!.threadPriority = 0;
-        queue.addOperation(swarmChemistryOperation);
+        dispatchSwarmChemistryOperations();
         
     }
     
-
+    private func dispatchSwarmChemistryOperations()
+    {
+        startTime = CFAbsoluteTimeGetCurrent();
+        
+        swarmChemistryOperations = Array<SwarmChemistryOperation>();
+        
+        let sampleSize : Int = 4096 / swarmChemistryOperationCount;
+        
+        for var i = 0; i < swarmChemistryOperationCount; i++
+        {
+            var swarmChemistryOperation = SwarmChemistryOperation(swarmMemberArray: swarmMemberArray, startIndex: i * sampleSize, sampleSize: sampleSize);
+            swarmChemistryOperation.threadPriority = 0;
+            
+            swarmChemistryOperations?.append(swarmChemistryOperation)
+            queue.addOperation(swarmChemistryOperation)
+        }
+    }
+    
    
     override func update(currentTime: CFTimeInterval)
     {
-        if let tmp = swarmChemistryOperation
+        var operationsStillRunning : Bool = false;
+        
+        for swarmChemistryOperation in swarmChemistryOperations!
         {
-            if tmp.finished
+            if !swarmChemistryOperation.finished
             {
-                var swarmChemistryOperation = SwarmChemistryOperation(swarmMemberArray: swarmMemberArray);
-                swarmChemistryOperation.threadPriority = 0;
-                queue.addOperation(swarmChemistryOperation);
+                operationsStillRunning = false;
             }
         }
-    
+  
+        if !operationsStillRunning
+        {
+            println("\(swarmChemistryOperations!.count) Operations time:" + NSString(format: "%.4f", CFAbsoluteTimeGetCurrent() - startTime!));
+            
+            dispatchSwarmChemistryOperations();
+        }
     }
 }

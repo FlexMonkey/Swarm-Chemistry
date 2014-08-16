@@ -9,30 +9,42 @@
 import UIKit
 import SpriteKit
 
-class GameViewController: UIViewController {
+class GameViewController: UIViewController
+{
 
-    override func viewDidLoad() {
+    @IBOutlet weak var threadButtonBar: UISegmentedControl!
+
+    var scene : GameScene?;
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
 
         /* Pick a size for the scene */
-        let scene = GameScene(fileNamed:"GameScene")
+        scene = GameScene(fileNamed:"GameScene")
         // Configure the view.
         let skView = self.view as SKView
         skView.showsFPS = true
         skView.showsNodeCount = true
         
-        skView.backgroundColor = UIColor.blackColor();
+        scene!.swarmChemistryOperationCount = 1;
         
         /* Sprite Kit applies additional optimizations to improve rendering performance */
         skView.ignoresSiblingOrder = true
         
         /* Set the scale mode to scale to fit the window */
-        scene.scaleMode = .AspectFill
+        scene!.scaleMode = .AspectFill
         
         skView.presentScene(scene)
     }
+    
+    @IBAction func threadButtonBarChangeHandler(sender: AnyObject)
+    {
+        scene!.swarmChemistryOperationCount = Int(pow(2.0, Float(threadButtonBar.selectedSegmentIndex)));
+    }
 
-    override func shouldAutorotate() -> Bool {
+    override func shouldAutorotate() -> Bool
+    {
         return true
     }
 
