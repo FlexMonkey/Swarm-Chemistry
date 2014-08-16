@@ -8,38 +8,47 @@
 
 import SpriteKit
 
-class GameScene: SKScene {
-    override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!";
-        myLabel.fontSize = 65;
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame));
+class GameScene: SKScene
+{
+    var swarmChemistryOperation : SwarmChemistryOperation?;
+    
+    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 1000);
+    let swarmMemberRange : Range<Int> = 0..<1000;
+    
+    let queue = NSOperationQueue();
+    
+    override func didMoveToView(view: SKView)
+    {
+        for i in swarmMemberRange
+        {
+            let swarmMember : SwarmMember = SwarmMember(color: UIColor.redColor(), size: CGSize(width: 2, height: 2));
+            
+            swarmMember.position = CGPoint(x: Int(rand()) % 1024, y: Int(rand()) % 768);
+            
+            swarmMemberArray.addObject(swarmMember);
+            
+            addChild(swarmMember);
+        }
         
-        self.addChild(myLabel)
+        swarmChemistryOperation = SwarmChemistryOperation(swarmMemberArray: swarmMemberArray);
+        swarmChemistryOperation!.threadPriority = 0;
+        queue.addOperation(swarmChemistryOperation);
+        
     }
     
-    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
-        /* Called when a touch begins */
-        
-        for touch: AnyObject in touches {
-            let location = touch.locationInNode(self)
-            
-            let sprite = SKSpriteNode(imageNamed:"Spaceship")
-            
-            sprite.xScale = 0.5
-            sprite.yScale = 0.5
-            sprite.position = location
-            
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
-            
-            sprite.runAction(SKAction.repeatActionForever(action))
-            
-            self.addChild(sprite)
-        }
-    }
+
    
-    override func update(currentTime: CFTimeInterval) {
-        /* Called before each frame is rendered */
+    override func update(currentTime: CFTimeInterval)
+    {
+        if let tmp = swarmChemistryOperation
+        {
+            if tmp.finished
+            {
+                var swarmChemistryOperation = SwarmChemistryOperation(swarmMemberArray: swarmMemberArray);
+                swarmChemistryOperation.threadPriority = 0;
+                queue.addOperation(swarmChemistryOperation);
+            }
+        }
+    
     }
 }
