@@ -6,10 +6,37 @@
 //  Copyright (c) 2014 Simon Gladman. All rights reserved.
 //
 
-import Foundation
-import SpriteKit
+import Foundation;
+import SpriteKit;
+import UIKit;
 
-public class SwarmMember : SKSpriteNode
+class SwarmMember : SKSpriteNode
 {
+    var genome : SwarmGenome?;
+ 
     
+    override init()
+    {
+        super.init();
+    }
+    
+    required init(coder aDecoder: NSCoder!)
+    {
+        super.init(coder: aDecoder);
+    }
+    
+    override init(texture: SKTexture!, color: UIColor!, size: CGSize)
+    {
+        super.init(texture: texture, color: color, size: size)
+    }
+    
+    init(genome : SwarmGenome)
+    {
+        super.init();
+        
+        self.genome = genome;
+        
+        color = genome.color;
+        size = CGSize(width: 2, height: 2);
+    }
 }

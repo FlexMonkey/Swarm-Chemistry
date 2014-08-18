@@ -17,6 +17,7 @@
 		3E4E8238199E3F8400F6C782 /* SwarmMember.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E8237199E3F8400F6C782 /* SwarmMember.swift */; };
 		3E4E823A199E3FD300F6C782 /* SwarmGenome.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E8239199E3FD300F6C782 /* SwarmGenome.swift */; };
 		3E4E823D199F23EC00F6C782 /* SwarmChemistryOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E823C199F23EC00F6C782 /* SwarmChemistryOperation.swift */; };
+		3E4E824019A0CC2600F6C782 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4E823F19A0CC2600F6C782 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		3E4E8237199E3F8400F6C782 /* SwarmMember.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwarmMember.swift; sourceTree = "<group>"; };
 		3E4E8239199E3FD300F6C782 /* SwarmGenome.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwarmGenome.swift; sourceTree = "<group>"; };
 		3E4E823C199F23EC00F6C782 /* SwarmChemistryOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwarmChemistryOperation.swift; sourceTree = "<group>"; };
+		3E4E823F19A0CC2600F6C782 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		3E4E8212199E3B1A00F6C782 /* SwarmChemistry */ = {
 			isa = PBXGroup;
 			children = (
+				3E4E823E19A0CC1400F6C782 /* constants */,
 				3E4E823B199F23D800F6C782 /* operations */,
 				3E4E8236199E3C4400F6C782 /* swarmChemistry */,
 				3E4E8215199E3B1A00F6C782 /* AppDelegate.swift */,
@@ -138,6 +141,14 @@
 				3E4E823C199F23EC00F6C782 /* SwarmChemistryOperation.swift */,
 			);
 			name = operations;
+			sourceTree = "<group>";
+		};
+		3E4E823E19A0CC1400F6C782 /* constants */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E823F19A0CC2600F6C782 /* Constants.swift */,
+			);
+			name = constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +255,7 @@
 				3E4E821C199E3B1A00F6C782 /* GameViewController.swift in Sources */,
 				3E4E823A199E3FD300F6C782 /* SwarmGenome.swift in Sources */,
 				3E4E8238199E3F8400F6C782 /* SwarmMember.swift in Sources */,
+				3E4E824019A0CC2600F6C782 /* Constants.swift in Sources */,
 				3E4E8216199E3B1A00F6C782 /* AppDelegate.swift in Sources */,
 				3E4E823D199F23EC00F6C782 /* SwarmChemistryOperation.swift in Sources */,
 			);

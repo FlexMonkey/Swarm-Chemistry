@@ -10,6 +10,8 @@ import SpriteKit
 
 class GameScene: SKScene
 {
+    let genomes : Array<SwarmGenome> = [Constants.genomeOne, Constants.genomeTwo, Constants.genomeThree, Constants.genomeFour];
+    
     var swarmChemistryOperations : Array<SwarmChemistryOperation>?;
     var swarmChemistryOperationCount = 1;
     
@@ -24,9 +26,12 @@ class GameScene: SKScene
     {
         backgroundColor = UIColor.blackColor();
         
+        
+        
         for i in swarmMemberRange
         {
-            let swarmMember : SwarmMember = SwarmMember(color: UIColor.redColor(), size: CGSize(width: 2, height: 2));
+            let genome : SwarmGenome = genomes[i % 4];
+            let swarmMember : SwarmMember = SwarmMember(genome: genome);
             
             swarmMember.position = CGPoint(x: Int(rand()) % 1024, y: Int(rand()) % 768);
             
@@ -45,7 +50,7 @@ class GameScene: SKScene
         
         swarmChemistryOperations = Array<SwarmChemistryOperation>();
         
-        let sampleSize : Int = 2048 / swarmChemistryOperationCount;
+        let sampleSize : Int = swarmMemberArray.count / swarmChemistryOperationCount;
         
         for var i = 0; i < swarmChemistryOperationCount; i++
         {
