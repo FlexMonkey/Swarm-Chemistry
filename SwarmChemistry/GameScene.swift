@@ -15,7 +15,7 @@ class GameScene: SKScene
     var swarmChemistryOperations : Array<SwarmChemistryOperation>?;
     var swarmChemistryOperationCount = 1;
     
-    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 2048);
+    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 2048); //
     let swarmMemberRange : Range<Int> = 0..<2048;
     
     let queue = NSOperationQueue();
@@ -26,14 +26,13 @@ class GameScene: SKScene
     {
         backgroundColor = UIColor.blackColor();
         
-        
-        
+       
         for i in swarmMemberRange
         {
             let genome : SwarmGenome = genomes[i % 4];
             let swarmMember : SwarmMember = SwarmMember(genome: genome);
             
-            swarmMember.position = CGPoint(x: Int(rand()) % 1024, y: Int(rand()) % 768);
+            swarmMember.position = CGPoint(x: Int(rand()) % Int(Constants.WIDTH), y: Int(rand()) % Int(Constants.HEIGHT));
             
             swarmMemberArray.addObject(swarmMember);
             
@@ -41,7 +40,6 @@ class GameScene: SKScene
         }
         
         dispatchSwarmChemistryOperations();
-        
     }
     
     private func dispatchSwarmChemistryOperations()
@@ -51,6 +49,8 @@ class GameScene: SKScene
         swarmChemistryOperations = Array<SwarmChemistryOperation>();
         
         let sampleSize : Int = swarmMemberArray.count / swarmChemistryOperationCount;
+        
+        queue.maxConcurrentOperationCount = swarmChemistryOperationCount;
         
         for var i = 0; i < swarmChemistryOperationCount; i++
         {

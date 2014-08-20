@@ -16,5 +16,6 @@ public struct Constants
     static let genomeThree = SwarmGenome(color: UIColor.greenColor(), radius: 25, c1_cohesion: 1, c2_alignment: 1, c3_seperation: 100, c4_steering: 0.5, c5_paceKeeping: 1);
     static let genomeFour = SwarmGenome(color: UIColor.whiteColor(), radius: 25, c1_cohesion: 1, c2_alignment: 1, c3_seperation: 100, c4_steering: 0.5, c5_paceKeeping: 1);
     
-    // let genomes : Array<SwarmGenome> = Array<SwarmGenome>();
+    static let WIDTH : CGFloat = 1024;
+    static let HEIGHT : CGFloat = 768; 
 }

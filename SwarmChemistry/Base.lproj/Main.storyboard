@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6205" systemVersion="13E28" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BV1-FR-VrT">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6198"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints with attributes relative to the layout margin" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -27,9 +28,6 @@
                                     <segment title="Pace Keeping"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="16" y="519" width="768" height="29"/>
-                                </variation>
                             </segmentedControl>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Aoe-re-0CW">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
@@ -40,15 +38,9 @@
                                     <segment title="Genome Four"/>
                                 </segments>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="16" y="483" width="768" height="29"/>
-                                </variation>
                             </segmentedControl>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cvq-88-KUI">
                                 <rect key="frame" x="0.0" y="-15" width="118" height="31"/>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="14" y="562" width="772" height="31"/>
-                                </variation>
                             </slider>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="MWp-Mk-2xj">
                                 <rect key="frame" x="-61" y="-14" width="123" height="29"/>
@@ -60,9 +52,6 @@
                                     <segment title="Sixteen Threads"/>
                                     <segment title="Thirty Two Threads"/>
                                 </segments>
-                                <variation key="widthClass=regular" misplaced="YES">
-                                    <rect key="frame" x="8" y="20" width="776" height="29"/>
-                                </variation>
                                 <connections>
                                     <action selector="threadButtonBarChangeHandler:" destination="BV1-FR-VrT" eventType="valueChanged" id="Cth-mc-cVZ"/>
                                 </connections>
@@ -92,19 +81,19 @@
                                 <exclude reference="MWp-Mk-2xj"/>
                             </mask>
                             <mask key="constraints">
-                                <exclude reference="7HB-rC-fJb"/>
-                                <exclude reference="V3D-nG-2hc"/>
-                                <exclude reference="hp7-27-43i"/>
-                                <exclude reference="2ZO-sN-NFd"/>
-                                <exclude reference="We1-vd-DeX"/>
-                                <exclude reference="Wri-f0-akm"/>
-                                <exclude reference="M0t-52-zr8"/>
-                                <exclude reference="W6v-rd-j5s"/>
-                                <exclude reference="fiy-cV-Pdp"/>
+                                <exclude reference="tt2-wz-tnl"/>
                                 <exclude reference="Psi-Kj-Oji"/>
                                 <exclude reference="h1P-RB-X82"/>
                                 <exclude reference="no0-h4-zfj"/>
-                                <exclude reference="tt2-wz-tnl"/>
+                                <exclude reference="2ZO-sN-NFd"/>
+                                <exclude reference="We1-vd-DeX"/>
+                                <exclude reference="Wri-f0-akm"/>
+                                <exclude reference="7HB-rC-fJb"/>
+                                <exclude reference="V3D-nG-2hc"/>
+                                <exclude reference="hp7-27-43i"/>
+                                <exclude reference="M0t-52-zr8"/>
+                                <exclude reference="W6v-rd-j5s"/>
+                                <exclude reference="fiy-cV-Pdp"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=regular">
@@ -115,19 +104,19 @@
                                 <include reference="MWp-Mk-2xj"/>
                             </mask>
                             <mask key="constraints">
-                                <include reference="7HB-rC-fJb"/>
-                                <include reference="V3D-nG-2hc"/>
-                                <include reference="hp7-27-43i"/>
-                                <include reference="2ZO-sN-NFd"/>
-                                <include reference="We1-vd-DeX"/>
-                                <include reference="Wri-f0-akm"/>
-                                <include reference="M0t-52-zr8"/>
-                                <include reference="W6v-rd-j5s"/>
-                                <include reference="fiy-cV-Pdp"/>
+                                <include reference="tt2-wz-tnl"/>
                                 <include reference="Psi-Kj-Oji"/>
                                 <include reference="h1P-RB-X82"/>
                                 <include reference="no0-h4-zfj"/>
-                                <include reference="tt2-wz-tnl"/>
+                                <include reference="2ZO-sN-NFd"/>
+                                <include reference="We1-vd-DeX"/>
+                                <include reference="Wri-f0-akm"/>
+                                <include reference="7HB-rC-fJb"/>
+                                <include reference="V3D-nG-2hc"/>
+                                <include reference="hp7-27-43i"/>
+                                <include reference="M0t-52-zr8"/>
+                                <include reference="W6v-rd-j5s"/>
+                                <include reference="fiy-cV-Pdp"/>
                             </mask>
                         </variation>
                     </view>
