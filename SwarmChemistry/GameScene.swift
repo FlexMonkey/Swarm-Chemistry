@@ -15,8 +15,8 @@ class GameScene: SKScene
     var swarmChemistryOperations : Array<SwarmChemistryOperation>?;
     var swarmChemistryOperationCount = 1;
     
-    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 512); //
-    let swarmMemberRange : Range<Int> = 0..<512;
+    var swarmMemberArray : NSMutableArray = NSMutableArray(capacity: 256); //
+    let swarmMemberRange : Range<Int> = 0..<256;
     
     let queue = NSOperationQueue();
     

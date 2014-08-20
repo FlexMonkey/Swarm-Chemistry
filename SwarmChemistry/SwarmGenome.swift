@@ -9,7 +9,7 @@
 import Foundation;
 import UIKit; 
 
-public class SwarmGenome
+public struct SwarmGenome
 {
     public var color : UIColor;
     
