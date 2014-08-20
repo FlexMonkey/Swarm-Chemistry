@@ -54,9 +54,9 @@ public class SwarmChemistryOperation : NSOperation
                 {
                     candidateNeighbour.distance = distance; //max,(distance, 0.001);
                
-                    if candidateNeighbour.distance < 0.01
+                    if candidateNeighbour.distance < 0.0001
                     {
-                        candidateNeighbour.distance = 0.01;
+                        candidateNeighbour.distance = 0.0001;
                     }
                     
                     neighbours.addObject(candidateNeighbour);
