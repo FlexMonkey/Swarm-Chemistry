@@ -89,27 +89,30 @@ public class SwarmChemistryOperation : NSOperation
                 tempAy = tempAy + Double(swarmMember.position.y - neighbour.position.y) / neighbour.distance * swarmMember.genome!.c3_seperation;
             }
             
-            /*
-            if (Math.random() < swarmMember.genome.c4_steering)
+            
+            if Double(rand() % 100) < (swarmMember.genome!.c4_steering * 100.0)
             {
-                tempAx += Math.random() * 4 - 2;
-                tempAy += Math.random() * 4 - 2;
+                tempAx = tempAx + Double(rand() % 4) - 2.0;
+                tempAy = tempAy + Double(rand() % 4) - 2.0;
             }
-*/
+
             
-            /*
-            swarmMember.accelerate(tempAx, tempAy, swarmMember.genome.maximumSpeed);
             
-            distance = sqrt(swarmMember.dx2 * swarmMember.dx2 +  swarmMember.dy2 *  swarmMember.dy2);
+            swarmMember.accelerate(tempAx, ay: tempAy, maxMove: swarmMember.genome!.maximumSpeed);
             
-            if (distance == 0)
+            var distance = sqrt(swarmMember.dx2 * swarmMember.dx2 +  swarmMember.dy2 *  swarmMember.dy2);
+            
+            if distance < 0.001
             {
                 distance = 0.001;
             }
-            swarmMember.accelerate(swarmMember.dx2 * (swarmMember.genome.normalSpeed - distance) / distance * swarmMember.genome.c5_paceKeeping,
-                swarmMember.dy2 * (swarmMember.genome.normalSpeed - distance) / distance * swarmMember.genome.c5_paceKeeping,
-                swarmMember.genome.maximumSpeed);
-            */
+            
+            swarmMember.accelerate(swarmMember.dx2 * (swarmMember.genome!.normalSpeed - distance) / distance * swarmMember.genome!.c5_paceKeeping,
+                ay: swarmMember.dy2 * (swarmMember.genome!.normalSpeed - distance) / distance * swarmMember.genome!.c5_paceKeeping,
+                maxMove: swarmMember.genome!.maximumSpeed);
+            
+            swarmMember.move();
+            
         }
         
         /*

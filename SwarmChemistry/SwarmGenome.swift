@@ -13,6 +13,8 @@ public class SwarmGenome
 {
     public var color : UIColor;
     
+    public var normalSpeed : Double = 0.5; 
+    public var maximumSpeed : Double = 1.0; 
     public var radius : Double;
     public var c1_cohesion : Double;
     public var c2_alignment : Double;
