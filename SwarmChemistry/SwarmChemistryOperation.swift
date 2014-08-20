@@ -32,13 +32,6 @@ public class SwarmChemistryOperation : NSOperation
         {
             let swarmMember : SwarmMember = swarmMemberArray[i] as SwarmMember;
             
-            swarmMember.position.x = CGFloat(swarmMember.position.x) + CGFloat(1);
-            
-            if swarmMember.position.x > 1024
-            {
-                swarmMember.position.x = 1; 
-            }
-            
             // swarm chemistry...
             
             var neighbours : NSMutableArray = NSMutableArray();
@@ -59,7 +52,12 @@ public class SwarmChemistryOperation : NSOperation
                 
                 if distance < swarmMember.genome!.radius
                 {
-                    candidateNeighbour.distance = distance; //max(distance, 0.001);
+                    candidateNeighbour.distance = distance; //max,(distance, 0.001);
+               
+                    if candidateNeighbour.distance < 0.01
+                    {
+                        candidateNeighbour.distance = 0.01;
+                    }
                     
                     neighbours.addObject(candidateNeighbour);
                     
@@ -70,6 +68,11 @@ public class SwarmChemistryOperation : NSOperation
                 }
     
             }
+            
+            localCentreX = localCentreX / Double(neighbours.count);
+            localCentreY = localCentreY / Double(neighbours.count);
+            localDx = localDx / Double(neighbours.count);
+            localDy = localDy / Double(neighbours.count);
             
             
             // do swarm chemisty....
@@ -106,6 +109,7 @@ public class SwarmChemistryOperation : NSOperation
             {
                 distance = 0.001;
             }
+            
             
             swarmMember.accelerate(swarmMember.dx2 * (swarmMember.genome!.normalSpeed - distance) / distance * swarmMember.genome!.c5_paceKeeping,
                 ay: swarmMember.dy2 * (swarmMember.genome!.normalSpeed - distance) / distance * swarmMember.genome!.c5_paceKeeping,

@@ -44,19 +44,18 @@ class SwarmMember : SKSpriteNode
         self.genome = genome;
         
         color = genome.color;
-        size = CGSize(width: 2, height: 2);
+        size = CGSize(width: 4, height: 4);
     }
     
     func move()
     {
-        
         dx = dx2;
         dy = dy2;
         
         let targetX = CGFloat(Double(position.x) + dx);
         let targetY = CGFloat(Double(position.y) + dy);
         
-        position = CGPoint(x: targetX, y: targetY);
+        position = CGPoint(x: targetX, y: targetY)
         
         if (position.y < 0)
         {
